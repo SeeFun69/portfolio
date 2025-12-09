@@ -1,81 +1,166 @@
 [
   {
-    "title": "Java BackEnd Developer",
-    "company": "PT Solusi Teknologi Sejati",
-    "period": "Aug 2024 - Present",
-    "responsibilities": [
-      "Mengembangkan berbagai modul ERP menggunakan framework internal jLeaf berbasis Spring Boot",
-      "Mengerjakan modul POS, Inventory, Master, Purchasing, dan Sales Order (SO) pada proyek VBI dan Katamata",
-      "Berfokus pada pengembangan fitur Inventory, terutama di bagian GTO (Goods Transfer Out) dan GTI (Goods Transfer In)",
-      "Terlibat dalam proyek JPT, khususnya pada modul Purchasing serta pembuatan custom report sesuai kebutuhan bisnis",
-      "Pada proyek KBPosMobile, mempelajari dan menggunakan Golang untuk melakukan testing serta memahami codebase aplikasi",
-      "Melakukan integrasi layanan backend dengan database VBI untuk kebutuhan akses data dan sinkronisasi",
-      "Mengembangkan layanan berbasis JSON, menerapkan lazy loading, serta melakukan debugging dan optimasi performa sistem",
-      "Bekerja dalam lingkungan kolaboratif melalui daily stand-up, task tracking, dan code review"
-    ],
-    "achievements": [
-      "Berkontribusi dalam pengembangan 4 project utama: VBI, Katamata, JPT, dan KBPosMobile",
-      "Menguasai Golang untuk kebutuhan testing dan memahami codebase di project KBPosMobile",
-      "Berhasil mengembangkan berbagai modul ERP yang kompleks (POS, Inventory, Master, Purchasing, Sales Order)"
-    ],
-    "skills": ["Java", "Spring Boot", "jLeaf", "Golang", "JSF", "PrimeFaces", "PostgreSQL", "JDBC", "Hibernate", "JPA"]
+    "id": {
+      "title": "Java BackEnd Developer",
+      "company": "PT Solusi Teknologi Sejati",
+      "period": "Aug 2024 - Present",
+      "responsibilities": [
+        "Mengembangkan berbagai modul ERP menggunakan framework internal jLeaf berbasis Spring Boot",
+        "Mengerjakan modul POS, Inventory, Master, Purchasing, dan Sales Order (SO) pada proyek VBI dan Katamata",
+        "Berfokus pada pengembangan fitur Inventory, terutama di bagian GTO (Goods Transfer Out) dan GTI (Goods Transfer In)",
+        "Terlibat dalam proyek JPT, khususnya pada modul Purchasing serta pembuatan custom report sesuai kebutuhan bisnis",
+        "Pada proyek KBPosMobile, mempelajari dan menggunakan Golang untuk melakukan testing serta memahami codebase aplikasi",
+        "Melakukan integrasi layanan backend dengan database VBI untuk kebutuhan akses data dan sinkronisasi",
+        "Mengembangkan layanan berbasis JSON, menerapkan lazy loading, serta melakukan debugging dan optimasi performa sistem",
+        "Bekerja dalam lingkungan kolaboratif melalui daily stand-up, task tracking, dan code review"
+      ],
+      "achievements": [
+        "Berkontribusi dalam pengembangan 4 project utama: VBI, Katamata, JPT, dan KBPosMobile",
+        "Menguasai Golang untuk kebutuhan testing dan memahami codebase di project KBPosMobile",
+        "Berhasil mengembangkan berbagai modul ERP yang kompleks (POS, Inventory, Master, Purchasing, Sales Order)"
+      ],
+      "skills": ["Java", "Spring Boot", "jLeaf", "Golang", "JSF", "PrimeFaces", "PostgreSQL", "JDBC", "Hibernate", "JPA"]
+    },
+    "en": {
+      "title": "Java BackEnd Developer",
+      "company": "PT Solusi Teknologi Sejati",
+      "period": "Aug 2024 - Present",
+      "responsibilities": [
+        "Developed various ERP modules using internal jLeaf framework based on Spring Boot",
+        "Worked on POS, Inventory, Master, Purchasing, and Sales Order (SO) modules in VBI and Katamata projects",
+        "Focused on Inventory feature development, especially in GTO (Goods Transfer Out) and GTI (Goods Transfer In) sections",
+        "Involved in JPT project, specifically in Purchasing module and creating custom reports according to business needs",
+        "In KBPosMobile project, learned and used Golang for testing and understanding the application codebase",
+        "Performed backend service integration with VBI database for data access and synchronization needs",
+        "Developed JSON-based services, implemented lazy loading, and performed debugging and system performance optimization",
+        "Worked in a collaborative environment through daily stand-ups, task tracking, and code reviews"
+      ],
+      "achievements": [
+        "Contributed to the development of 4 main projects: VBI, Katamata, JPT, and KBPosMobile",
+        "Mastered Golang for testing needs and understanding the codebase in KBPosMobile project",
+        "Successfully developed various complex ERP modules (POS, Inventory, Master, Purchasing, Sales Order)"
+      ],
+      "skills": ["Java", "Spring Boot", "jLeaf", "Golang", "JSF", "PrimeFaces", "PostgreSQL", "JDBC", "Hibernate", "JPA"]
+    }
   },
   {
-    "title": "Java BackEnd Developer",
-    "company": "PT FINTEK DIGITAL INDONESIA",
-    "period": "May 2023 - Feb 2024",
-    "responsibilities": [
-      "Membuat API endpoint menggunakan Spring Boot",
-      "Mengembangkan dan memelihara fitur backend",
-      "Melakukan daily meeting, update tiket, dan diskusi progres kerja",
-      "Review kode untuk menyetujui pull request dari developer lain"
-    ],
-    "achievements": [
-      "Berkontribusi dalam pengembangan project Wisbayar dan Pusdafil",
-      "Meningkatkan kualitas kode melalui code review yang ketat"
-    ],
-    "skills": ["Java", "Spring Boot", "MySQL", "Spring Data JPA", "Spring MVC", "RESTful Web Services", "Spring Security", "Hibernate", "XXLJob", "RabbitMQ", "Redis"]
+    "id": {
+      "title": "Java BackEnd Developer",
+      "company": "PT FINTEK DIGITAL INDONESIA",
+      "period": "May 2023 - Feb 2024",
+      "responsibilities": [
+        "Membuat API endpoint menggunakan Spring Boot",
+        "Mengembangkan dan memelihara fitur backend",
+        "Melakukan daily meeting, update tiket, dan diskusi progres kerja",
+        "Review kode untuk menyetujui pull request dari developer lain"
+      ],
+      "achievements": [
+        "Berkontribusi dalam pengembangan project Wisbayar dan Pusdafil",
+        "Meningkatkan kualitas kode melalui code review yang ketat"
+      ],
+      "skills": ["Java", "Spring Boot", "MySQL", "Spring Data JPA", "Spring MVC", "RESTful Web Services", "Spring Security", "Hibernate", "XXLJob", "RabbitMQ", "Redis"]
+    },
+    "en": {
+      "title": "Java BackEnd Developer",
+      "company": "PT FINTEK DIGITAL INDONESIA",
+      "period": "May 2023 - Feb 2024",
+      "responsibilities": [
+        "Created API endpoints using Spring Boot",
+        "Developed and maintained backend features",
+        "Conducted daily meetings, updated tickets, and discussed work progress",
+        "Reviewed code to approve pull requests from other developers"
+      ],
+      "achievements": [
+        "Contributed to the development of Wisbayar and Pusdafil projects",
+        "Improved code quality through rigorous code reviews"
+      ],
+      "skills": ["Java", "Spring Boot", "MySQL", "Spring Data JPA", "Spring MVC", "RESTful Web Services", "Spring Security", "Hibernate", "XXLJob", "RabbitMQ", "Redis"]
+    }
   },
   {
-    "title": "Java BackEnd Developer",
-    "company": "PT. Infosys Solusi Terpadu",
-    "period": "May 2022 - Jan 2023",
-    "responsibilities": [
-      "Mengembangkan dan memelihara aplikasi backend",
-      "Membuat endpoint API menggunakan Spring Boot",
-      "Mengembangkan dan menambahkan fitur-fitur lain yang dibutuhkan",
-      "Menggunakan PostgreSQL sebagai basis data",
-      "Membuat unit test menggunakan JUnit 4 dan Mockito",
-      "Membantu tim machine learning untuk debugging permasalahan",
-      "Melakukan pertemuan harian, mendiskusikan progres, memperbarui tiket, dan pekerjaan lainnya",
-      "Melakukan review kode untuk menyetujui pull request dari developer lain"
-    ],
-    "achievements": [
-      "Berkontribusi dalam pengembangan project BTN Syaria",
-      "Meningkatkan kualitas kode melalui unit testing dengan JUnit 4 dan Mockito",
-      "Mendukung tim machine learning dalam debugging dan troubleshooting"
-    ],
-    "skills": ["Java", "Spring Boot", "PostgreSQL", "Spring Data JPA", "Spring MVC", "RESTful Web Services", "Spring Security", "Hibernate", "JUnit 4", "Mockito"]
+    "id": {
+      "title": "Java BackEnd Developer",
+      "company": "PT. Infosys Solusi Terpadu",
+      "period": "May 2022 - Jan 2023",
+      "responsibilities": [
+        "Mengembangkan dan memelihara aplikasi backend",
+        "Membuat endpoint API menggunakan Spring Boot",
+        "Mengembangkan dan menambahkan fitur-fitur lain yang dibutuhkan",
+        "Menggunakan PostgreSQL sebagai basis data",
+        "Membuat unit test menggunakan JUnit 4 dan Mockito",
+        "Membantu tim machine learning untuk debugging permasalahan",
+        "Melakukan pertemuan harian, mendiskusikan progres, memperbarui tiket, dan pekerjaan lainnya",
+        "Melakukan review kode untuk menyetujui pull request dari developer lain"
+      ],
+      "achievements": [
+        "Berkontribusi dalam pengembangan project BTN Syaria",
+        "Meningkatkan kualitas kode melalui unit testing dengan JUnit 4 dan Mockito",
+        "Mendukung tim machine learning dalam debugging dan troubleshooting"
+      ],
+      "skills": ["Java", "Spring Boot", "PostgreSQL", "Spring Data JPA", "Spring MVC", "RESTful Web Services", "Spring Security", "Hibernate", "JUnit 4", "Mockito"]
+    },
+    "en": {
+      "title": "Java BackEnd Developer",
+      "company": "PT. Infosys Solusi Terpadu",
+      "period": "May 2022 - Jan 2023",
+      "responsibilities": [
+        "Developed and maintained backend applications",
+        "Created API endpoints using Spring Boot",
+        "Developed and added other required features",
+        "Used PostgreSQL as the database",
+        "Created unit tests using JUnit 4 and Mockito",
+        "Assisted the machine learning team in debugging issues",
+        "Conducted daily meetings, discussed progress, updated tickets, and other tasks",
+        "Reviewed code to approve pull requests from other developers"
+      ],
+      "achievements": [
+        "Contributed to the development of BTN Syaria project",
+        "Improved code quality through unit testing with JUnit 4 and Mockito",
+        "Supported the machine learning team in debugging and troubleshooting"
+      ],
+      "skills": ["Java", "Spring Boot", "PostgreSQL", "Spring Data JPA", "Spring MVC", "RESTful Web Services", "Spring Security", "Hibernate", "JUnit 4", "Mockito"]
+    }
   },
   {
-    "title": "Freelance Backend Developer",
-    "company": "Management System for Pondok in Tangerang",
-    "period": "Nov 2021 - Feb 2022",
-    "responsibilities": [
-      "Membuat API CRUD menggunakan Laravel 8",
-      "Mengembangkan aplikasi sebagai backend",
-      "Mengembangkan aplikasi baru atau melakukan pemeliharaan pada aplikasi yang sudah ada",
-      "Menggunakan PostgreSQL sebagai basis data",
-      "Melakukan pemeliharaan fitur dan berkomunikasi dengan pengguna/klien",
-      "Membuat dan mengembangkan fitur tambahan sesuai kebutuhan",
-      "Stand-up meeting harian bersama tim developer dan Project Manager, berdiskusi mengenai praktik terbaik bersama developer Laravel senior",
-      "Melakukan perbaikan bug"
-    ],
-    "achievements": [
-      "Berhasil mengembangkan sistem manajemen pondok dari awal hingga selesai",
-      "Meningkatkan pemahaman tentang best practices Laravel melalui diskusi dengan senior developer"
-    ],
-    "skills": ["Laravel 8", "PostgreSQL", "Artisan CLI", "Routing", "Authentication", "Composer", "Vue.js"]
+    "id": {
+      "title": "Freelance Backend Developer",
+      "company": "Management System for Pondok in Tangerang",
+      "period": "Nov 2021 - Feb 2022",
+      "responsibilities": [
+        "Membuat API CRUD menggunakan Laravel 8",
+        "Mengembangkan aplikasi sebagai backend",
+        "Mengembangkan aplikasi baru atau melakukan pemeliharaan pada aplikasi yang sudah ada",
+        "Menggunakan PostgreSQL sebagai basis data",
+        "Melakukan pemeliharaan fitur dan berkomunikasi dengan pengguna/klien",
+        "Membuat dan mengembangkan fitur tambahan sesuai kebutuhan",
+        "Stand-up meeting harian bersama tim developer dan Project Manager, berdiskusi mengenai praktik terbaik bersama developer Laravel senior",
+        "Melakukan perbaikan bug"
+      ],
+      "achievements": [
+        "Berhasil mengembangkan sistem manajemen pondok dari awal hingga selesai",
+        "Meningkatkan pemahaman tentang best practices Laravel melalui diskusi dengan senior developer"
+      ],
+      "skills": ["Laravel 8", "PostgreSQL", "Artisan CLI", "Routing", "Authentication", "Composer", "Vue.js"]
+    },
+    "en": {
+      "title": "Freelance Backend Developer",
+      "company": "Management System for Pondok in Tangerang",
+      "period": "Nov 2021 - Feb 2022",
+      "responsibilities": [
+        "Created CRUD API using Laravel 8",
+        "Developed application as backend",
+        "Developed new applications or maintained existing applications",
+        "Used PostgreSQL as the database",
+        "Maintained features and communicated with users/clients",
+        "Created and developed additional features as needed",
+        "Daily stand-up meetings with developer team and Project Manager, discussed best practices with senior Laravel developers",
+        "Fixed bugs"
+      ],
+      "achievements": [
+        "Successfully developed boarding house management system from start to finish",
+        "Improved understanding of Laravel best practices through discussions with senior developers"
+      ],
+      "skills": ["Laravel 8", "PostgreSQL", "Artisan CLI", "Routing", "Authentication", "Composer", "Vue.js"]
+    }
   }
 ]
-

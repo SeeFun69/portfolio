@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface ProjectCardProps {
   title: string
@@ -19,6 +20,8 @@ export default function ProjectCard({
   impact,
   githubLink,
 }: ProjectCardProps) {
+  const { t } = useLanguage()
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,17 +45,17 @@ export default function ProjectCard({
 
       <div className="space-y-4">
         <div>
-          <h4 className="font-semibold text-navy-800 mb-2">Problem</h4>
+          <h4 className="font-semibold text-navy-800 mb-2">{t.projects.problem}</h4>
           <p className="text-gray-600">{problem}</p>
         </div>
 
         <div>
-          <h4 className="font-semibold text-navy-800 mb-2">Solution</h4>
+          <h4 className="font-semibold text-navy-800 mb-2">{t.projects.solution}</h4>
           <p className="text-gray-600">{solution}</p>
         </div>
 
         <div>
-          <h4 className="font-semibold text-navy-800 mb-2">Impact</h4>
+          <h4 className="font-semibold text-navy-800 mb-2">{t.projects.impact}</h4>
           <p className="text-gray-600">{impact}</p>
         </div>
       </div>
@@ -64,10 +67,9 @@ export default function ProjectCard({
           rel="noopener noreferrer"
           className="mt-6 inline-block text-navy-700 hover:text-navy-900 font-semibold"
         >
-          View on GitHub →
+          {t.projects.viewGitHub}
         </a>
       )}
     </motion.div>
   )
 }
-

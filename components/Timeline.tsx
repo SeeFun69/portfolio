@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface TimelineItemProps {
   title: string
@@ -12,6 +13,8 @@ interface TimelineItemProps {
 }
 
 export default function Timeline({ items }: { items: TimelineItemProps[] }) {
+  const { t } = useLanguage()
+  
   return (
     <div className="relative">
       {/* Timeline Line */}
@@ -39,7 +42,7 @@ export default function Timeline({ items }: { items: TimelineItemProps[] }) {
               </div>
 
               <div className="mb-4">
-                <h4 className="font-semibold text-navy-800 mb-2">Responsibilities:</h4>
+                <h4 className="font-semibold text-navy-800 mb-2">{t.experience.responsibilities}</h4>
                 <ul className="list-disc list-inside space-y-1 text-gray-600">
                   {item.responsibilities.map((resp, idx) => (
                     <li key={idx}>{resp}</li>
@@ -49,7 +52,7 @@ export default function Timeline({ items }: { items: TimelineItemProps[] }) {
 
               {item.achievements && item.achievements.length > 0 && (
                 <div className="mb-4">
-                  <h4 className="font-semibold text-navy-800 mb-2">Achievements:</h4>
+                  <h4 className="font-semibold text-navy-800 mb-2">{t.experience.achievements}</h4>
                   <ul className="list-disc list-inside space-y-1 text-gray-600">
                     {item.achievements.map((achievement, idx) => (
                       <li key={idx}>{achievement}</li>
@@ -59,7 +62,7 @@ export default function Timeline({ items }: { items: TimelineItemProps[] }) {
               )}
 
               <div>
-                <h4 className="font-semibold text-navy-800 mb-2">Skills Used:</h4>
+                <h4 className="font-semibold text-navy-800 mb-2">{t.experience.skillsUsed}</h4>
                 <div className="flex flex-wrap gap-2">
                   {item.skills.map((skill) => (
                     <span
@@ -78,4 +81,3 @@ export default function Timeline({ items }: { items: TimelineItemProps[] }) {
     </div>
   )
 }
-

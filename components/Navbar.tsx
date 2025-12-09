@@ -3,19 +3,21 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Skills', href: '/skills' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Experience', href: '/experience' },
-  { name: 'Contact', href: '/contact' },
+  { key: 'home', href: '/' },
+  { key: 'about', href: '/about' },
+  { key: 'skills', href: '/skills' },
+  { key: 'projects', href: '/projects' },
+  { key: 'experience', href: '/experience' },
+  { key: 'contact', href: '/contact' },
 ]
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,10 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'id' ? 'en' : 'id')
+  }
 
   return (
     <motion.nav
@@ -40,39 +46,56 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.key}
                 href={item.href}
                 className="text-navy-700 hover:text-navy-900 font-medium transition-colors"
               >
-                {item.name}
+                {t.nav[item.key as keyof typeof t.nav]}
               </Link>
             ))}
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-1.5 bg-navy-100 text-navy-700 rounded-lg font-medium hover:bg-navy-200 transition-colors text-sm"
+              aria-label="Toggle language"
+            >
+              {language === 'id' ? 'EN' : 'ID'}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-navy-900"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="md:hidden flex items-center space-x-4">
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-1.5 bg-navy-100 text-navy-700 rounded-lg font-medium hover:bg-navy-200 transition-colors text-sm"
+              aria-label="Toggle language"
             >
-              {isMobileMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+              {language === 'id' ? 'EN' : 'ID'}
+            </button>
+            <button
+              className="text-navy-900"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMobileMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -85,12 +108,12 @@ export default function Navbar() {
           >
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.key}
                 href={item.href}
                 className="block text-navy-700 hover:text-navy-900 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item.name}
+                {t.nav[item.key as keyof typeof t.nav]}
               </Link>
             ))}
           </motion.div>

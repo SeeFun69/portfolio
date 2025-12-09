@@ -6,8 +6,10 @@ import Footer from '@/components/Footer'
 import SectionTitle from '@/components/SectionTitle'
 import { motion } from 'framer-motion'
 import { siteConfig } from '@/lib/config'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ContactPage() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,8 +58,8 @@ export default function ContactPage() {
       <div className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            title="Get In Touch"
-            subtitle="I'd love to hear from you. Send me a message and I'll respond as soon as possible."
+            title={t.contact.title}
+            subtitle={t.contact.subtitle}
           />
 
           <motion.div
@@ -69,7 +71,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-navy-900 mb-2">
-                  Name
+                  {t.contact.name}
                 </label>
                 <input
                   type="text"
@@ -79,13 +81,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-navy-500 focus:border-transparent outline-none transition-all"
-                  placeholder="Your name"
+                  placeholder={t.contact.namePlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-navy-900 mb-2">
-                  Email
+                  {t.contact.email}
                 </label>
                 <input
                   type="email"
@@ -95,13 +97,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-navy-500 focus:border-transparent outline-none transition-all"
-                  placeholder="your.email@example.com"
+                  placeholder={t.contact.emailPlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-navy-900 mb-2">
-                  Message
+                  {t.contact.message}
                 </label>
                 <textarea
                   id="message"
@@ -111,19 +113,19 @@ export default function ContactPage() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-navy-500 focus:border-transparent outline-none transition-all resize-none"
-                  placeholder="Your message..."
+                  placeholder={t.contact.messagePlaceholder}
                 />
               </div>
 
               {submitStatus === 'success' && (
                 <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-xl">
-                  Thank you! Your message has been sent successfully.
+                  {t.contact.successMessage}
                 </div>
               )}
 
               {submitStatus === 'error' && (
                 <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-xl">
-                  Something went wrong. Please try again later.
+                  {t.contact.errorMessage}
                 </div>
               )}
 
@@ -132,16 +134,16 @@ export default function ContactPage() {
                 disabled={isSubmitting}
                 className="w-full px-8 py-3 bg-navy-900 text-white rounded-xl font-semibold hover:bg-navy-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? t.contact.sending : t.contact.sendMessage}
               </button>
             </form>
 
             <div className="mt-12 pt-8 border-t border-gray-200">
-              <h3 className="text-xl font-bold text-navy-900 mb-4">Other Ways to Reach Me</h3>
+              <h3 className="text-xl font-bold text-navy-900 mb-4">{t.contact.otherWays}</h3>
               <div className="space-y-3 text-gray-700">
                 {/* Kontak info diambil dari .env file */}
                 <p>
-                  <span className="font-semibold">Email:</span>{' '}
+                  <span className="font-semibold">{t.common.email}:</span>{' '}
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
                     className="text-navy-700 hover:text-navy-900 underline"
@@ -151,7 +153,7 @@ export default function ContactPage() {
                 </p>
                 {siteConfig.contact.linkedin && (
                   <p>
-                    <span className="font-semibold">LinkedIn:</span>{' '}
+                    <span className="font-semibold">{t.common.linkedin}:</span>{' '}
                     <a
                       href={siteConfig.contact.linkedin}
                       target="_blank"
@@ -164,7 +166,7 @@ export default function ContactPage() {
                 )}
                 {siteConfig.contact.github && (
                   <p>
-                    <span className="font-semibold">GitHub:</span>{' '}
+                    <span className="font-semibold">{t.common.github}:</span>{' '}
                     <a
                       href={siteConfig.contact.github}
                       target="_blank"
@@ -177,7 +179,7 @@ export default function ContactPage() {
                 )}
                 {siteConfig.contact.phone && (
                   <p>
-                    <span className="font-semibold">Phone:</span>{' '}
+                    <span className="font-semibold">{t.common.phone}:</span>{' '}
                     <a
                       href={`tel:${siteConfig.contact.phone}`}
                       className="text-navy-700 hover:text-navy-900 underline"
@@ -188,7 +190,7 @@ export default function ContactPage() {
                 )}
                 {siteConfig.contact.website && (
                   <p>
-                    <span className="font-semibold">Website:</span>{' '}
+                    <span className="font-semibold">{t.common.website}:</span>{' '}
                     <a
                       href={siteConfig.contact.website}
                       target="_blank"
@@ -208,4 +210,3 @@ export default function ContactPage() {
     </main>
   )
 }
-

@@ -1,20 +1,17 @@
-import type { Metadata } from 'next'
+'use client'
+
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionTitle from '@/components/SectionTitle'
 import Timeline from '@/components/Timeline'
 import { getExperience } from '@/lib/experience'
-import { siteConfig } from '@/lib/config'
-
-export const metadata: Metadata = {
-  title: `Experience — ${siteConfig.name}`,
-  description: `Professional experience and career journey of ${siteConfig.name}.`,
-}
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ExperiencePage() {
+  const { language, t } = useLanguage()
   // Data experience diambil dari file data/experience.json
   // Edit file tersebut untuk mengubah experience
-  const experienceItems = getExperience()
+  const experienceItems = getExperience(language)
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -22,8 +19,8 @@ export default function ExperiencePage() {
       <div className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            title="Professional Experience"
-            subtitle="Building robust systems and delivering impactful solutions"
+            title={t.experience.title}
+            subtitle={t.experience.subtitle}
           />
 
           <Timeline items={experienceItems} />
@@ -33,4 +30,3 @@ export default function ExperiencePage() {
     </main>
   )
 }
-

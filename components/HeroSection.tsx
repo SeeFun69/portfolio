@@ -4,9 +4,11 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { siteConfig } from '@/lib/config'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HeroSection() {
   const [imageError, setImageError] = useState(false)
+  const { t } = useLanguage()
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-navy-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -32,7 +34,7 @@ export default function HeroSection() {
               transition={{ delay: 0.3 }}
               className="text-2xl md:text-3xl text-navy-700 font-semibold"
             >
-              {siteConfig.title}
+              {t.hero.title}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -40,7 +42,7 @@ export default function HeroSection() {
               transition={{ delay: 0.4 }}
               className="text-lg text-gray-600 leading-relaxed"
             >
-              {siteConfig.description}
+              {t.hero.description}
             </motion.p>
 
             <motion.div
@@ -53,14 +55,14 @@ export default function HeroSection() {
                 href="/contact"
                 className="px-8 py-3 bg-navy-900 text-white rounded-2xl font-semibold hover:bg-navy-800 transition-colors text-center shadow-lg hover:shadow-xl"
               >
-                Contact Me
+                {t.hero.contactMe}
               </Link>
               <a
                 href={siteConfig.cvFile}
                 download
                 className="px-8 py-3 bg-white text-navy-900 border-2 border-navy-900 rounded-2xl font-semibold hover:bg-navy-50 transition-colors text-center shadow-lg hover:shadow-xl"
               >
-                Download CV
+                {t.hero.downloadCV}
               </a>
             </motion.div>
           </motion.div>

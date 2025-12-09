@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { siteConfig } from '@/lib/config'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} — Portfolio`,
@@ -27,7 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }

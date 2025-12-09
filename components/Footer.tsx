@@ -1,8 +1,12 @@
+'use client'
+
 import Link from 'next/link'
 import { siteConfig } from '@/lib/config'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const { t } = useLanguage()
 
   return (
     <footer className="bg-navy-900 text-white py-12">
@@ -10,43 +14,43 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">{siteConfig.name}</h3>
-            <p className="text-gray-300">{siteConfig.description}</p>
+            <p className="text-gray-300">{t.hero.description}</p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
+                  {t.nav.about}
                 </Link>
               </li>
               <li>
                 <Link href="/projects" className="text-gray-300 hover:text-white transition-colors">
-                  Projects
+                  {t.nav.projects}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
+                  {t.nav.contact}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Connect</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.connect}</h4>
             <ul className="space-y-2 text-gray-300">
               {/* Kontak info diambil dari .env file */}
               <li>
-                Email:{' '}
+                {t.common.email}:{' '}
                 <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white underline">
                   {siteConfig.contact.email}
                 </a>
               </li>
               {siteConfig.contact.linkedin && (
                 <li>
-                  LinkedIn:{' '}
+                  {t.common.linkedin}:{' '}
                   <a
                     href={siteConfig.contact.linkedin}
                     target="_blank"
@@ -59,7 +63,7 @@ export default function Footer() {
               )}
               {siteConfig.contact.github && (
                 <li>
-                  GitHub:{' '}
+                  {t.common.github}:{' '}
                   <a
                     href={siteConfig.contact.github}
                     target="_blank"
@@ -72,7 +76,7 @@ export default function Footer() {
               )}
               {siteConfig.contact.phone && (
                 <li>
-                  Phone:{' '}
+                  {t.common.phone}:{' '}
                   <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-white underline">
                     {siteConfig.contact.phone}
                   </a>
@@ -83,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-navy-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
+          <p>&copy; {currentYear} {siteConfig.name}. {t.footer.allRightsReserved}</p>
         </div>
       </div>
     </footer>
