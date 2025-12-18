@@ -64,7 +64,7 @@ const projects = [
       id: 'Financial Reporting System',
       en: 'Financial Reporting System',
     },
-    tools: ['Java', 'Spring Boot', 'PostgreSQL', 'SQL Optimization', 'Stored Procedures'],
+    tools: ['Go (Golang)', 'Next.js', 'PostgreSQL', 'Docker', 'TypeScript', 'React Query'],
     problem: {
       id:
         'Laporan keuangan yang kompleks membutuhkan waktu 5-10 menit untuk dihasilkan, menyebabkan keterlambatan dalam pengambilan keputusan bisnis.',
@@ -83,6 +83,7 @@ const projects = [
       en:
         'Report generation time reduced from 5-10 minutes to under 30 seconds, enabling real-time financial analysis and faster decision-making.',
     },
+    demoLink: process.env.NEXT_PUBLIC_FINANCIAL_DEMO_URL || 'http://localhost:3002/login',
     githubLink: 'https://github.com/rasyid-hidayat/financial-reporting',
   },
   {
